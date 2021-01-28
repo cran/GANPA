@@ -31,7 +31,8 @@ function (isets, gset, glist = NULL, option)
         K <- length(gi)
         X <- length(intersect(gi, gset))
         X0 <- M * K/N
-        w[i] <- switch(option, x = X, x0 = X0, dx = X - X0, or = X/X0, 
+		pval <- fisher.test(matrix(c(X, M-X, K-X, N-M-K+X), ncol=2), alternative="greater")$p.value
+        w[i] <- switch(option, x = X, x0 = X0, dx = X - X0, or = X/X0, p=pval,
             stop("Unknown 'option'"))
     }
     names(w) <- glist

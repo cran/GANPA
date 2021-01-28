@@ -1,8 +1,8 @@
 GSE.Test.Main <-
-function (gExprs.obj, gsets, gNET, 
-    check.exprs = TRUE, msp.groups, size.min = 15, 
+function (gExprs.obj, gsets = gsets, gNET = gNET, 
+    check.exprs = TRUE, msp.groups = msp.groups, size.min = 15, 
     size.max = 500, permN = 1000, randN = 30, permFDR.cutoff = 0.5, 
-    output.label = "dataset", msp.correction = TRUE) 
+    output.label = "P53_C2", msp.correction = TRUE) 
 {
     gsets.w.orig <- weight.gsets.test(gsets = gsets, isets = gNET)
     if (msp.correction) {
@@ -19,10 +19,13 @@ function (gExprs.obj, gsets, gNET,
         method = "absmean", randN = randN)
     GSET.MeanAbs.OrigW <- GSE.Test(T.obj = T.obj, gsets.weight = gsets.w.orig.fil, 
         method = "abswmean", randN = randN)
+
+	out <- list(GSET.MeanAbs.NoW=GSET.MeanAbs.NoW, GSET.MeanAbs.OrigW=GSET.MeanAbs.OrigW)
     if (msp.correction) {
         gsets.w.multi.fil <- gsets.w.multi[names(gsets.fil)]
         GSET.MeanAbs.MultiW <- GSE.Test(T.obj = T.obj, gsets.weight = gsets.w.multi.fil, 
             method = "abswmean", randN = randN)
+		out[["GSET.MeanAbs.MultiW"]] <- GSET.MeanAbs.MultiW
     }
     write.csv(summary.GSE.Test(GSET.MeanAbs.NoW, fdr.perm.cut = permFDR.cutoff), 
         file = paste(output.label, "MeanAbs.NoW.csv", sep = "."))
@@ -32,6 +35,7 @@ function (gExprs.obj, gsets, gNET,
         write.csv(summary.GSE.Test(GSET.MeanAbs.MultiW, fdr.perm.cut = permFDR.cutoff), 
             file = paste(output.label, "MeanAbs.MultiW.csv", 
                 sep = "."))
+	return(out)
 }
 GSE.Test <-
 function (T.obj, gsets.weight, method = "abswmean", randN = 1000, 

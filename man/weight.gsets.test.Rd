@@ -11,7 +11,6 @@ weight.gsets.test(isets, gsets)
   \item{isets}{A gene association network stored in a list.}
   \item{gsets}{Pathways stored in the form of a list of gene sets.}
 }
-\details{}
 \value{
 A list of named numeric vectors storing gene weights, with 
 gene names in the vector names.
@@ -22,7 +21,6 @@ A Network-Based Gene Weighting Approach for Pathway Analysis.
 \emph{Submitted}. 
 }
 \author{Zhaoyuan Fang, Weidong Tian and Hongbin Ji}
-\note{}
 \seealso{
   \code{\link{weight.gsets.with.msprot}}
 }

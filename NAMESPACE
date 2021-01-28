@@ -2,6 +2,6 @@ import(graphics)
 import(stats)
 import(grDevices)
 import(utils)
+import(GANPAdata)
 
 export(weight.gsets.test, weight.gsets.with.msprot, GSE.Test.Main)
-

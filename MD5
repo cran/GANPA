@@ -1,0 +1,11 @@
+b234ee4d69f5fce4486a80fdaf4a4263 *COPYING
+fa4c11e1af5255b56b3b8a2660f8d574 *DESCRIPTION
+d0a22f211d654a0b568451c8d2f4b133 *NAMESPACE
+7ce58a24893637a68bc40d8174161999 *R/gexprs.R
+c53832618002fd34ebb3544f899e57de *R/gsets.R
+4bcae68e77896d2f35128e6c30d0d71c *R/gsettest.R
+b0b1228abc904344f777baae1e01339f *R/msprot.R
+46f5f0c370aafb22113eeae709d08412 *man/GANPA-package.Rd
+6e13d684ebad2b1fe2875dc5b835810d *man/GSE.Test.Main.Rd
+d20eab8a64f6a7d0a664edf1c532c487 *man/weight.gsets.test.Rd
+120c4c88baeae50152b59cd9a5ef1cc2 *man/weight.gsets.with.msprot.Rd

@@ -14,7 +14,6 @@ weight.gsets.with.msprot(gsets, isets.multi, msp.groups)
   \item{isets.multi}{Pathways stored in the form of a list of gene sets.}
   \item{msp.groups}{A list of multi-subunit proteins.}
 }
-\details{}
 \value{
 A list of named numeric vectors storing gene weights, with gene names in the vector names. 
 }
@@ -24,8 +23,6 @@ Zhaoyuan Fang, Weidong Tian and Hongbin Ji. A Network-Based Gene Weighting Appro
 \author{
 Zhaoyuan Fang, Weidong Tian and Hongbin Ji
 }
-\note{}
 \seealso{
   \code{\link{weight.gsets.test}}
 }
-\examples{}

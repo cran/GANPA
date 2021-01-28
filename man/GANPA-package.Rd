@@ -27,5 +27,3 @@ Zhaoyuan Fang, Weidong Tian and Hongbin Ji. A Network-Based Gene Weighting Appro
 Aravind Subramanian, Pablo Tamayo, Vamsi K. Mootha, Sayan Mukherjee, Benjamin L. Ebert, Michael A. Gillette, Amanda Paulovich, Scott L. Pomeroy, Todd R. Golub, Eric S. Lander, and Jill P. Mesirov. Gene set enrichment analysis: A knowledge-based approach for interpreting genome-wide expression profiles. \emph{PNAS} 2005 102(43): 15545-15550. 
 }
 \keyword{package}
-\seealso{}
-\examples{}

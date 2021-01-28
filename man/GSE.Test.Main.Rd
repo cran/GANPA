@@ -5,7 +5,9 @@
   Test the significance of pathways in microarray experiments. This includes a network-based gene weighting algorithm for pathways. Classical and gene-weighted versions of gene set analysis approaches are both used. When required, this function also corrects for gene weighting biases caused by multiple-subunit protein.
 }
 \usage{
-GSE.Test.Main(gExprs.obj, gsets, gNET, check.exprs = TRUE, msp.groups, size.min = 15, size.max = 500, permN = 1000, randN = 30, permFDR.cutoff = 0.5, output.label = "", msp.correction = TRUE)
+GSE.Test.Main(gExprs.obj, gsets, gNET, check.exprs = TRUE, msp.groups, 
+			  size.min = 15, size.max = 500, permN = 1000, randN = 30, 
+			  permFDR.cutoff = 0.5, output.label = "", msp.correction = TRUE)
 }
 \arguments{
   \item{gExprs.obj}{Gene expression experiment data object.}
@@ -21,7 +23,6 @@ GSE.Test.Main(gExprs.obj, gsets, gNET, check.exprs = TRUE, msp.groups, size.min 
   \item{output.label}{A label to name output files, e.g. "P53\_C2".}
   \item{msp.correction}{Logical (TRUE). Whether to do a correction for multi-subunit proteins in gene weighting.}
 }
-\details{}
 \value{It will write analysis results to .csv files.}
 \references{
   Zhaoyuan Fang, Weidong Tian and Hongbin Ji. A Network-Based Gene Weighting Approach for Pathway Analysis. \emph{Submitted}. 
@@ -29,11 +30,13 @@ GSE.Test.Main(gExprs.obj, gsets, gNET, check.exprs = TRUE, msp.groups, size.min 
 \author{
   Zhaoyuan Fang, Weidong Tian and Hongbin Ji
 }
-\note{}
-\seealso{}
 \examples{
 # Not to run
 # library(GANPAdata)
-# data("gExprs.p53", "gsets.msigdb.pnas", "gNET", "msp.groups", package="GANPAdata")
-# GSE.Test.Main(gExprs.obj=gExprs.p53, gsets=gsets.msigdb.pnas, gNET=gNET, check.exprs=TRUE, msp.groups=msp.groups, size.min=15, size.max=500, permN=1000, randN=30, permFDR.cutoff=0.5, output.label="P53\_C2", msp.correction=TRUE)
+# data("gExprs.p53", "gsets.msigdb.pnas", "gNET", "msp.groups", 
+#      package="GANPAdata")
+# GSE.Test.Main(gExprs.obj=gExprs.p53, gsets=gsets.msigdb.pnas, 
+#      gNET=gNET, check.exprs=TRUE, msp.groups=msp.groups, 
+#      size.min=15, size.max=500, permN=1000, randN=30, 
+#      permFDR.cutoff=0.5, output.label="P53\_C2", msp.correction=TRUE)
 }
